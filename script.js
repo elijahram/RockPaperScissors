@@ -2,20 +2,25 @@ document.getElementById("rock").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "ROCK";
     const rpsResult = checkWinner(playerSelect, compSelect);
-    alert(rpsResult);
+    answerMessage(rpsResult);
 });
 document.getElementById("paper").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "PAPER";
     const rpsResult = checkWinner(playerSelect, compSelect);
-    alert(rpsResult);
+    answerMessage(rpsResult);
 });
 document.getElementById("scissors").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "SCISSORS";
     const rpsResult = checkWinner(playerSelect, compSelect);
-    alert(rpsResult);
+    answerMessage(rpsResult);
 });
+
+function answerMessage(result) {
+    const message = document.getElementById("message-container");
+    message.innerText = result;
+}
 
 function computerSelection() {
     let choices = ["ROCK", "PAPER", "SCISSORS"];
