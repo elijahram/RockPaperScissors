@@ -13,3 +13,9 @@
 body{
     margin: 0;
 }
+#message-container{
+    border: 100px solid #333;
+    text-align: center;
+    font-size: 2rem;
+    color: darkorange;
+}
