@@ -5,12 +5,9 @@
     margin-top: 100px;
 }
 
-.flexbox-container{
+.choices{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
     margin-top: 200px;
 }
 body{
