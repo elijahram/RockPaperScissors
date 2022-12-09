@@ -1,8 +1,11 @@
 .title{
     font-size: 80px;
     text-align: center;
-    color: darkslategray;
+    color: rgb(28, 110, 187);
     margin-top: 100px;
+    border: 3px solid;
+    border-radius: 25px;
+    background-color: rgb(176, 176, 176);
 }
 
 .choices{
