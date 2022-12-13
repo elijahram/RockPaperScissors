@@ -13,6 +13,19 @@
     justify-content: center;
     margin-top: 200px;
 }
+.results{
+    margin-top: 1rem;
+    font-size: 3rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.result-score{
+    margin-left: .1rem;
+    font-size: 2rem;
+}
 body {
 	height: 100%;
 	background-image: linear-gradient(hsl(10,90,66), transparent 70%);
