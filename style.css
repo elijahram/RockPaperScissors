@@ -22,7 +22,7 @@
     justify-items: center;
     align-items: center;
 }
-.result-score{
+#result-score{
     margin-left: .1rem;
     font-size: 2rem;
 }
@@ -60,3 +60,5 @@ html {
 	background-position: top center;
 	background-attachment: fixed;
 	}
+
+/* i know i need to adjust css for win and loss column */
