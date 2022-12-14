@@ -38,3 +38,4 @@ function checkWinner(playerSelect, compSelect) {
         return (playerSelect === "ROCK") ? "You win!" : "You Lose!"
     }
 }
+// need to increment count on win and loss column
