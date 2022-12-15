@@ -1,24 +1,57 @@
+let playerWin = 0;
+let playerLose = 0;
+
 document.getElementById("rock").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "ROCK";
     const rpsResult = checkWinner(playerSelect, compSelect);
+    
+    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
+        playerWin++;
+    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
+        playerLose++;
+    }
     answerMessage(rpsResult);
+    winCount(playerWin);
+    loseCount(playerLose);
 });
 document.getElementById("paper").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "PAPER";
     const rpsResult = checkWinner(playerSelect, compSelect);
+    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
+        playerWin++;
+    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
+        playerLose++;
+    }
     answerMessage(rpsResult);
+    winCount(playerWin);
+    loseCount(playerLose);
 });
 document.getElementById("scissors").addEventListener('click', () => {
     const compSelect = computerSelection();
     const playerSelect = "SCISSORS";
     const rpsResult = checkWinner(playerSelect, compSelect);
+    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
+        playerWin++;
+    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
+        playerLose++;
+    }
     answerMessage(rpsResult);
+    winCount(playerWin);
+    loseCount(playerLose);
 });
 
 function answerMessage(result) {
     const message = document.getElementById("message-container");
+    message.innerText = result;
+}
+function winCount(result) {
+    const message = document.getElementById("win-score");
+    message.innerText = result;
+}
+function loseCount(result) {
+    const message = document.getElementById("lose-score");
     message.innerText = result;
 }
 
@@ -38,4 +71,6 @@ function checkWinner(playerSelect, compSelect) {
         return (playerSelect === "ROCK") ? "You win!" : "You Lose!"
     }
 }
-// need to increment count on win and loss column
+// function winnerResult(result) {
+//     if 
+// }
