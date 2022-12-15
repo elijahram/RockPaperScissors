@@ -22,7 +22,11 @@
     justify-items: center;
     align-items: center;
 }
-#result-score{
+#win-score{
+    margin-left: .1rem;
+    font-size: 2rem;
+}
+#lose-score{
     margin-left: .1rem;
     font-size: 2rem;
 }
