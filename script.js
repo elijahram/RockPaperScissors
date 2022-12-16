@@ -71,6 +71,3 @@ function checkWinner(playerSelect, compSelect) {
         return (playerSelect === "ROCK") ? "You win!" : "You Lose!"
     }
 }
-// function winnerResult(result) {
-//     if 
-// }
