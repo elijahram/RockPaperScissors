@@ -21,14 +21,17 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    color: darkorchid;
 }
 #win-score{
     margin-left: .1rem;
     font-size: 2rem;
+    color: aqua;
 }
 #lose-score{
     margin-left: .1rem;
     font-size: 2rem;
+    color: aqua;
 }
 body {
 	height: 100%;
