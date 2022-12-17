@@ -1,58 +1,46 @@
 let playerWin = 0;
 let playerLose = 0;
 
-document.getElementById("rock").addEventListener('click', () => {
+function playGame(playerSelect) {
     const compSelect = computerSelection();
-    const playerSelect = "ROCK";
     const rpsResult = checkWinner(playerSelect, compSelect);
     
-    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
+    if (rpsResult === "You win!") {
         playerWin++;
-    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
+    } else if (rpsResult === "You Lose!") {
         playerLose++;
     }
-    answerMessage(rpsResult);
-    winCount(playerWin);
-    loseCount(playerLose);
-});
-document.getElementById("paper").addEventListener('click', () => {
-    const compSelect = computerSelection();
-    const playerSelect = "PAPER";
-    const rpsResult = checkWinner(playerSelect, compSelect);
-    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
-        playerWin++;
-    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
-        playerLose++;
-    }
-    answerMessage(rpsResult);
-    winCount(playerWin);
-    loseCount(playerLose);
-});
-document.getElementById("scissors").addEventListener('click', () => {
-    const compSelect = computerSelection();
-    const playerSelect = "SCISSORS";
-    const rpsResult = checkWinner(playerSelect, compSelect);
-    if ((checkWinner(playerSelect, compSelect) === "You win!")) {
-        playerWin++;
-    } else if (checkWinner(playerSelect, compSelect) === "You Lose!") {
-        playerLose++;
-    }
-    answerMessage(rpsResult);
-    winCount(playerWin);
-    loseCount(playerLose);
+    
+    displayResultOfCheckWinner(rpsResult);
+    displayUpdatedWinRecord(playerWin);
+    displayUpdatedLossRecord(playerLose);
+}
+
+document.getElementById("rock").addEventListener('click', () => {
+    playGame("ROCK");
 });
 
-function answerMessage(result) {
+document.getElementById("paper").addEventListener('click', () => {
+   playGame("PAPER")
+});
+
+document.getElementById("scissors").addEventListener('click', () => {
+    playGame("SCISSORS")
+});
+
+function displayResultOfCheckWinner(result) {
     const message = document.getElementById("message-container");
     message.innerText = result;
 }
-function winCount(result) {
-    const message = document.getElementById("win-score");
-    message.innerText = result;
+
+function displayUpdatedWinRecord(updatedWinCount) {
+    const winScoreContainer = document.getElementById("win-score");
+    winScoreContainer.innerText = updatedWinCount;
 }
-function loseCount(result) {
-    const message = document.getElementById("lose-score");
-    message.innerText = result;
+
+function displayUpdatedLossRecord(updatedLossCount) {
+    const loseScoreContainer = document.getElementById("lose-score");
+    loseScoreContainer.innerText = updatedLossCount;
 }
 
 function computerSelection() {
@@ -60,6 +48,7 @@ function computerSelection() {
     let selection = choices[Math.floor(Math.random()*choices.length)];
     return selection;
 }
+
 function checkWinner(playerSelect, compSelect) {
     if (playerSelect === compSelect) {
         return "It's a Draw!";
