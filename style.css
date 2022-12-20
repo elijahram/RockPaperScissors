@@ -4,6 +4,7 @@
     color: #f5d442;
     margin-top: 100px;
 }
+
 body{
     background: rgb(0,0,8);
     background: linear-gradient(90deg, rgba(0,0,8,1) 0%, rgba(120,120,120,1) 35%, rgba(0,183,255,1) 100%);
@@ -14,6 +15,16 @@ body{
     justify-content: space-evenly;
     margin-top: 200px;
 }
+
+.button{
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(1.2);
+}
+
 .results{
     margin-top: 1rem;
     font-size: 3rem;
@@ -24,20 +35,24 @@ body{
     align-items: center;
     color: #f5d442;
 }
+
 #win-score{
     margin-left: .1rem;
     font-size: 2rem;
     color: #f5d442;
 }
+
 #lose-score{
     margin-left: .1rem;
     font-size: 2rem;
     color: #f5d442;
 }
+
 .message-box{
     display: flex;
     justify-content: center;
 }
+
 #message-container{
     width: fit-content;
     margin-top: 50px;
@@ -46,11 +61,13 @@ body{
     font-size: 2rem;
     color: #f5d442;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	}
+
 .my-container{
     display: block;
     position: relative;
